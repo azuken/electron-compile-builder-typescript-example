@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron .",
     "pre-pack": "electron-compile --appDir . ./src",
-    "pack": "electron-builder --dir",
+    "package": "electron-builder --dir",
     "dist": "electron-builder"
   },
   "devDependencies": {

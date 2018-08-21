@@ -1,6 +1,4 @@
-const electron = require('electron');//import { app, BrowserWindow } from 'electron'
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+import { app, BrowserWindow } from 'electron'
 //import {enableLiveReload} from 'electron-compile';
 
 //enableLiveReload();
@@ -8,9 +6,9 @@ const BrowserWindow = electron.BrowserWindow;
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // global reference to mainWindow (necessary to prevent window from being garbage collected)
-let mainWindow;
+let mainWindow: BrowserWindow;
 
-function createMainWindow() {
+function createMainWindow(): BrowserWindow {
   const window = new BrowserWindow()
 
   if (isDevelopment) {

@@ -8,12 +8,13 @@ yarn start
 
 Build to a folder
 ```
-yarn run pre-pack
-yarn run pack
+yarn pre-pack
+yarn package
 ```
 
 Build to an installer
 ```
+yarn pre-pack
 yarn dist
 ```
 
@@ -30,4 +31,4 @@ The package.json has:
 We do this build step manually.
 Looks like electon-builder is messing up something when it tries to do the electron compile step.
 
-You probably need to remove the `.cache` dir at some stage.
+You need to remove the `.cache` dir before `yarn start` will work. `yarn pre-pack` generates this folder.
